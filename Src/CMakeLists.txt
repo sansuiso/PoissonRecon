@@ -1,8 +1,8 @@
-set(POISSONRECON_SRC PoissonRecon.cpp PlyFile.cpp)
-add_executable(PoissonRecon ${POISSONRECON_SRC})
+add_executable(PoissonRecon PoissonRecon.cpp)
+target_sources(PoissonRecon PRIVATE PlyFile.cpp)
 
-set(SSDRECON_SRC SSDRecon.cpp PlyFile.cpp)
-add_executable(SSDRecon ${SSDRECON_SRC})
+add_executable(SSDRecon SSDRecon.cpp)
+target_sources(SSDRecon PRIVATE PlyFile.cpp)
 
-set(SURFACETRIMMER_SRC SurfaceTrimmer.cpp PlyFile.cpp)
-add_executable(SurfaceTrimmer ${SURFACETRIMMER_SRC})
+add_executable(SurfaceTrimmer SurfaceTrimmer.cpp)
+target_sources(SurfaceTrimmer PRIVATE PlyFile.cpp)
